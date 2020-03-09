@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %> 
+    <title>Landing Page</title>
+</head>
+<body>
+    <% include ../partials/nav %> 
+    <h1>this is the landing page AFTER you login/register</h1>
+    <% if (user) { %>
+        <h1>Welcome <span style='color: blue' id='myUserName'><%= user.name %></span>, </h1> 
+    <% } %>
+
+     <div>
+     <h1><%= data.name %> </h1>
+    </div>
+
+
+    
+   
+
+
+
+
+    
+    <% include ../partials/scripts %> 
+</body>
+</html>
