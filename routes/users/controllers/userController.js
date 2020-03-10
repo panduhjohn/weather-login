@@ -108,7 +108,7 @@ module.exports = {
     },
 
     render404: (req, res) => {
-        return res.render('main/404test')
+        return res.render('main/404')
     }
 
 };
