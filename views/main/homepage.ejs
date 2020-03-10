@@ -5,7 +5,24 @@
     <title>Landing Page</title>
 </head>
 <body>
-    <h1>this is the landing page to login/register</h1>
+    <% include ../partials/nav %> 
+    <h1 class='makeWhite'>this is the landing page to login/register</h1>
+
+    <% if (user) { %>
+        <h1 class='makeWhite'>Welcome <span style='color: red' id='myUserName'><%= user.name %></span>, </h1> 
+    <% } %>
+
+    <form form role="form" class="form-group" action="/users/weather" method="GET">  
+
+        <fieldset>
+            <div class="form-group">
+                <label class='makeWhite' for="email">City Name: </label>
+                <input type="text" class="form-control inputContainer" id="cityName" name="cityName" placeholder="Enter city to see current weather conditions" />
+            </div>
+        </fieldset>
+            <button type="submit" class="btn btn-primary">Submit</button>
+   
+    </form>
     
     <% include ../partials/scripts %> 
 </body>

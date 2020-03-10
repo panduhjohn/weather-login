@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <% include ../partials/head %> 
-    <title>Landing Page</title>
-</head>
-<body>
-    <% include ../partials/nav %> 
-    <h1>this is the landing page AFTER you login/register</h1>
-    <% if (user) { %>
-        <h1>Welcome <span style='color: blue' id='myUserName'><%= user.name %></span>, </h1> 
-    <% } %>
+    <head>
+        <% include ../partials/head %>
+        <title>Weather in <%= data.name %></title>
+    </head>
+    <body>
+        <% include ../partials/nav %>
+        <div id='weatherContainer'>
+           
 
-     <div>
-     <h1><%= data.name %> </h1>
-    </div>
+            <% if (user) { %>
+            <h1>Welcome<span style="color: red" id="myUserName"> <%= user.name %>!</span></h1>
+            <% } %>
 
+            <h4>The weather in <span style='color: red'><%= data.name %></span> is as follows...</h4>
+            <p>The visibility is <%= data.visibility %> feet</p>
+            <p>The current temperature is <%= Math.round(data.main.temp) %> °C</p>
+            <p>Todays low temp is <%= Math.round(data.main.temp_min) %> °C</p>
+            <p>The high today will be <%= Math.round(data.main.temp_max) %> °C</p>
+            <p>The humidity is <%= data.main.humidity %>%</p>
+        </div>
 
-    
-   
-
-
-
-
-    
-    <% include ../partials/scripts %> 
-</body>
+        <% include ../partials/scripts %>
+    </body>
 </html>

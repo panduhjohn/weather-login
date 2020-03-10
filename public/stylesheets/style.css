@@ -1,13 +1,50 @@
 * {
     margin: 0;
     padding: 0;
-}
+} 
 
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+     url('../images/weatherBG.jpg');
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 a {
-  color: #00B7FF;
+    color: white;
+}
+
+#weatherContainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* background-color: blue; */
+    color: white;
+    align-items: center;
+    padding-top: 20px;
+    /* width: 200px; */
+   
+}
+
+.inputContainer {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+
+
+}
+
+.makeWhite {
+    color: white
 }

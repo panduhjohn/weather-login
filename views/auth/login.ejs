@@ -7,7 +7,7 @@
     </head>
     <body>
         <% include ../partials/nav %>
-        <h1>This is the login page</h1>
+        
         <% if (errors.length > 0) { %>
         <div class="alert alert-danger alert-dismissible">
             <button
@@ -21,30 +21,23 @@
             <%= errors %>
         </div>
         <% } %>
-
-        <form form role="form" method="POST" action="/users/login">
-            <fieldset>
-                <div class="form-group">
-                    <label for="email">Email: </label>
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="email"
-                        name="email"
-                    />
-                </div>
-                <div class="form-group">
-                    <label for="password">Password: </label>
-                    <input
-                        type="password"
-                        class="form-control"
-                        id="password"
-                        name="password"
-                    />
-                </div>
-            </fieldset>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <div class="inputContainer">
+            <h1 class='makeWhite'>This is the login page</h1>
+            <form form role="form" method="POST" action="/users/login">
+                <fieldset>
+                    <div class="form-group">
+                        <label class='makeWhite' for="email">Email: </label>
+                        <input type="text" class="form-control" id="email" name="email" />
+                    </div>
+                    <div class="form-group">
+                        <label class='makeWhite' for="password">Password: </label>
+                        <input type="password" class="form-control" id="password" name="password" />
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        
 
         <% include ../partials/scripts %>
     </body>
